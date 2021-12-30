@@ -3,3 +3,8 @@
 *.txt
 *.exe
 *.o
+*.c*flags
+*.creator*
+*.config
+*.files
+*.includes
