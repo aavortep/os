@@ -19,9 +19,10 @@ int main()
     int fd[N];
     int pid;
 
-    const char *const messages[N] = { "axcvgyujnh\n", "qwerty\n" };
+    const char *const messages[N] = { "axcvgyujnh", "qwerty" };
     char str1[BUFFSIZE] = { 0 };
 	char str2[BUFFSIZE] = { 0 };
+	char check[BUFFSIZE] = { 0 };
 
     if (pipe(fd) == -1)
     {
@@ -76,9 +77,12 @@ int main()
     close(fd[1]);
     read(fd[0], str1, strlen(messages[0]));
 	read(fd[0], str2, strlen(messages[1]));
+	read(fd[0], check, strlen(check));
 
     fprintf(stdout, "First message: %s", str1);
-	fprintf(stdout, "Second message: %s\n", str2);
+	fprintf(stdout, "\nSecond message: %s", str2);
+	fprintf(stdout, "\nCheck: %s\n", check);
+	
     fprintf(stdout, "Parent process. Children ID: %d, %d.\nParent process is dead.\n", child[0], child[1]);
 
     return OK;
