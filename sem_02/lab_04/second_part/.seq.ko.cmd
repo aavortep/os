@@ -1,0 +1,1 @@
+cmd_/home/a_avortep/prog/os/sem_02/lab_04/second_part/seq.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/a_avortep/prog/os/sem_02/lab_04/second_part/seq.ko /home/a_avortep/prog/os/sem_02/lab_04/second_part/seq.o /home/a_avortep/prog/os/sem_02/lab_04/second_part/seq.mod.o;  true
